@@ -64,10 +64,9 @@ replace the ad-hoc signature with Developer ID signing and notarize the app.
    enable the app. macOS requires this permission to post mouse events.
 3. If macOS requests Input Monitoring access for passive HID input, grant it
    and relaunch the app.
-4. In your preferred mouse-remapping software, configure **Mouse Button 4**
-   (upper-left) and **Mouse Button 5** (upper-right) with the actions you want.
-   CGEvent's zero-based button numbers 3 and 4 are commonly displayed as
-   Buttons 4 and 5.
+4. Open your preferred mouse-remapping software's event-listening or button-
+   capture function. Press each upper SlimBlade button in turn, then assign the
+   action you want to each event it detects.
 5. Optionally enable **Launch at Login** in the menu. This uses
    `SMAppService.mainApp`; it is most reliable after the app has been copied to
    `/Applications` and normally signed.
