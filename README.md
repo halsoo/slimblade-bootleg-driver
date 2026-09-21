@@ -4,6 +4,15 @@ A small native macOS menu-bar bridge for the **wired Kensington SlimBlade**
 (USB vendor `0x047D`, product `0x2041`). It turns the two upper physical-button
 bits into ordinary extra mouse buttons and leaves all remapping to BetterMouse.
 
+I built this because I use a wired Kensington SlimBlade, but I do not want
+KensingtonWorks on my Mac. I also prefer to keep button mapping in the mouse
+remapping software I already use, instead of running multiple mouse utilities
+that can collide while handling the same events.
+
+This app intentionally does one small job: it exposes the SlimBlade's two upper
+buttons as ordinary extra mouse buttons. It does not assign actions; your
+preferred remapping app remains in charge.
+
 ## How it works
 
 The app observes the matching USB HID device with public `IOHIDManager` APIs.
