@@ -2,7 +2,8 @@
 
 A small native macOS menu-bar bridge for the **wired Kensington SlimBlade**
 (USB vendor `0x047D`, product `0x2041`). It turns the two upper physical-button
-bits into ordinary extra mouse buttons and leaves all remapping to BetterMouse.
+bits into ordinary extra mouse buttons and leaves all remapping to your
+preferred mouse-remapping software.
 
 I built this because I use a wired Kensington SlimBlade, but I do not want
 KensingtonWorks on my Mac. I also prefer to keep button mapping in the mouse
@@ -35,7 +36,7 @@ contains only HID, event-posting, lifecycle, and menu integration.
 
 - macOS 13 Ventura or newer
 - A wired Kensington SlimBlade with VID/PID `047D:2041`
-- BetterMouse for the actual actions/remapping
+- Your preferred mouse-remapping software for the actual actions
 
 No kernel extension or DriverKit extension is installed.
 
@@ -63,9 +64,10 @@ replace the ad-hoc signature with Developer ID signing and notarize the app.
    enable the app. macOS requires this permission to post mouse events.
 3. If macOS requests Input Monitoring access for passive HID input, grant it
    and relaunch the app.
-4. In BetterMouse, configure **Mouse Button 4** (upper-left) and **Mouse Button
-   5** (upper-right) with the actions you want. CGEvent's zero-based button
-   numbers 3 and 4 are commonly displayed as Buttons 4 and 5.
+4. In your preferred mouse-remapping software, configure **Mouse Button 4**
+   (upper-left) and **Mouse Button 5** (upper-right) with the actions you want.
+   CGEvent's zero-based button numbers 3 and 4 are commonly displayed as
+   Buttons 4 and 5.
 5. Optionally enable **Launch at Login** in the menu. This uses
    `SMAppService.mainApp`; it is most reliable after the app has been copied to
    `/Applications` and normally signed.
@@ -79,8 +81,8 @@ mode, native-button mode, or the most recent HID/event error.
 The five-byte report layout is specific to the tested wired `0x2041` protocol.
 A firmware revision that uses different report IDs or byte positions may need a
 parser adjustment. When the HID descriptor already exposes usages 3/4, this app
-intentionally emits nothing; BetterMouse should consume the device's native
-button events directly.
+intentionally emits nothing; your mouse-remapping software should consume the
+device's native button events directly.
 
 ## License
 
@@ -91,6 +93,5 @@ provenance, copyright notices, and the upstream license.
 
 SlimBlade Bootleg Driver is an unofficial, independent project. It is not
 affiliated with, endorsed by, or sponsored by Kensington, the LinearMouse
-project or its contributors, or BetterMouse or its developer. Those names are
-used only to identify compatible hardware, upstream provenance, and optional
-interoperability.
+project, or its contributors. Those names are used only to identify compatible
+hardware and upstream provenance.
