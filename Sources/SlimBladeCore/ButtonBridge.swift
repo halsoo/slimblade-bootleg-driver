@@ -1,5 +1,7 @@
 import Foundation
 
+// SlimBlade report handling adapted from LinearMouse; see THIRD_PARTY_NOTICES.md.
+
 public enum SlimBladeButton: Int, CaseIterable, Hashable, Sendable {
     case upperLeft = 3
     case upperRight = 4

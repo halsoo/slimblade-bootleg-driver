@@ -75,4 +75,13 @@ button events directly.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+This project is available under the MIT License; see [LICENSE](LICENSE).
+Portions of the wired SlimBlade HID handling and event synthesis were adapted
+from LinearMouse. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for
+provenance, copyright notices, and the upstream license.
+
+SlimBlade Bootleg Driver is an unofficial, independent project. It is not
+affiliated with, endorsed by, or sponsored by Kensington, the LinearMouse
+project or its contributors, or BetterMouse or its developer. Those names are
+used only to identify compatible hardware, upstream provenance, and optional
+interoperability.

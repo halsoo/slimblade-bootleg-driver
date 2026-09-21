@@ -3,6 +3,8 @@ import Foundation
 import IOKit.hid
 import SlimBladeCore
 
+// HID observation/event synthesis adapted from LinearMouse; see THIRD_PARTY_NOTICES.md.
+
 final class HIDBridgeService {
     struct Snapshot: Equatable {
         let connected: Int
